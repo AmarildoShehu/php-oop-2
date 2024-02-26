@@ -35,4 +35,11 @@ class Category {
                 <h2>{$this->name}</h2>
             </div>";
     }
+}
+
+
+$dogCategory = new Category("Cane");
+
+// Visualizzazione della card della categoria "Cane"
+$dogCategory->displayCard();
 ?>
