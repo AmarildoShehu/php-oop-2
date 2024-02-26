@@ -73,22 +73,28 @@ class AccessoryProduct extends Product {
     }
 }
 
+// Creazione delle categorie
 $dogCategory = new Category("Cane");
-// Creazione di alcuni prodotti canini
-$royalCanin = new FoodProduct("Royal Canin Mini Adult", 15.99, "https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000", $dogCategory, "Adult");
-$kongClassic = new ToyProduct("Kong Classic", 8.49, "https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg", $dogCategory);
+$catCategory = new Category("Gatto");
+$birdCategory = new Category("Uccelli");
+$fishCategory = new Category("Pesci");
 
-//prodotto accessorio
+// Creazione di alcuni prodotti
+$royalCanin = new FoodProduct("Royal Canin Mini Adult", 15.99, "https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000", $dogCategory, "Adult");
+$almoNatureCatDaily = new FoodProduct("Almo Nature Cat Daily Lattina", 3.99, "https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg", $catCategory, "Lattina");
+$kongClassic = new ToyProduct("Kong Classic", 8.49, "https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg", $dogCategory);
 $volieraWilma = new AccessoryProduct("Voliera Wilma in Legno", 79.99, "https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg", $birdCategory);
 
-
-// Visualizzazione card della categoria Cane
-$dogCategory->displayCard();
 // Visualizzazione delle card
-echo $royalCanin->displayCard();
+$dogCategory->displayCard();
+$royalCanin->displayCard();
+
+$catCategory->displayCard();
+$almoNatureCatDaily->displayCard();
+
+$dogCategory->displayCard();
 $kongClassic->displayCard();
 
-
-// Visualizzazione della card accessorio
+$birdCategory->displayCard();
 $volieraWilma->displayCard();
 ?>
