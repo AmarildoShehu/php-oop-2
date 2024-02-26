@@ -37,9 +37,23 @@ class Category {
     }
 }
 
+class FoodProduct extends Product {
+    private $foodType;
+
+    public function __construct($title, $price, $image, $category, $foodType) {
+        parent::__construct($title, $price, $image, $category);
+        $this->foodType = $foodType;
+    }
+
+    public function displayCard() {
+        $foodDetails = "<p>Tipo: Cibo - {$this->foodType}</p>";
+        $categoryDetails = $this->category->displayCard();
+        echo parent::displayCard() . $foodDetails . $categoryDetails;
+    }
+}
 
 $dogCategory = new Category("Cane");
 
-// Visualizzazione della card della categoria "Cane"
+// Visualizzazione card della categoria Cane
 $dogCategory->displayCard();
 ?>
