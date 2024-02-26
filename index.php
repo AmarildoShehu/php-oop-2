@@ -52,6 +52,13 @@ class FoodProduct extends Product {
     }
 }
 
+class ToyProduct extends Product {
+    public function displayCard() {
+        $categoryDetails = $this->category->displayCard();
+        echo parent::displayCard() . "<p>Tipo: Gioco</p>" . $categoryDetails;
+    }
+}
+
 $dogCategory = new Category("Cane");
 
 // Visualizzazione card della categoria Cane
